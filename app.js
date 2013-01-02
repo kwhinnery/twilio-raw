@@ -22,7 +22,7 @@ var port = process.env.PORT || 5000;
 //Will only respond to a POST
 http.createServer(function (req, res) {
 
-    if (request.method == 'POST') {
+    if (req.method == 'POST') {
         var body = '';
 
         req.on('data', function (data) {
@@ -36,7 +36,7 @@ http.createServer(function (req, res) {
 
             //validate incoming request is from twilio
             var token = config.authToken,
-                header = request.headers['X-Twilio-Signature'];
+                header = req.headers['X-Twilio-Signature'];
 
             if (twilio.validateRequest(config.token, header, 'http://twilio-raw.herokuapp.com', POST)) {
                 //generate a TwiML response
