@@ -3,7 +3,7 @@ var twilio = require('twilio'),
     qs = require('querystring');
 
 //Get Twilio config
-var config;
+var config = {};
 
 //prod/heroku
 if (process.env.ACCOUNT_SID) {
