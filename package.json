@@ -10,6 +10,6 @@
 		"npm": "1.1.x"
 	},
 	"dependencies": {
-		"twilio":"0.7.x"
+		"twilio":"git://github.com/kwhinnery/twilio-node.git"
 	}
 }
