@@ -36,7 +36,7 @@ http.createServer(function (req, res) {
 
             //validate incoming request is from twilio
             var token = config.authToken,
-                header = req.headers['X-Twilio-Signature'];
+                header = req.headers['x-twilio-signature'];
 
             console.log('headers: '+ JSON.stringify(req.headers));
 
