@@ -38,6 +38,9 @@ http.createServer(function (req, res) {
             var token = config.authToken,
                 header = req.headers['X-Twilio-Signature'];
 
+            console.log('Got Twilio Header: '+header);
+            console.log('Got POST params: '+JSON.stringify(POST));
+
             if (twilio.validateRequest(token, header, 'http://twilio-raw.herokuapp.com', POST)) {
                 //generate a TwiML response
                 var resp = new twilio.TwimlResponse();
