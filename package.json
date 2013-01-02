@@ -10,7 +10,6 @@
 		"npm": "1.1.x"
 	},
 	"dependencies": {
-		"express": "*",
-		"ejs": "*"
+		"twilio":"0.7.x"
 	}
 }
