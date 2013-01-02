@@ -56,10 +56,11 @@ http.createServer(function (req, res) {
             }
         });
     }
-
-    res.writeHead(200, {
-        'Content-Type':'text/plain'
-    });
-    res.end('send a POST.');
+    else {
+        res.writeHead(200, {
+            'Content-Type':'text/plain'
+        });
+        res.end('send a POST.');
+    }
 
 }).listen(port);
